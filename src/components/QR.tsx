@@ -1,7 +1,7 @@
 "use client";
 
 import ReactDOMServer from "react-dom/server";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { toPng } from "html-to-image";
 import { saveAs } from "file-saver";
 import { QRCode } from "react-qrcode-logo";
@@ -9,15 +9,10 @@ import { HuePicker } from "react-color";
 
 function QR() {
   const [qrData, setQrData] = useState("https://trilliumsmith.com/");
-  const [isReady, setIsReady] = useState(false);
   const [colorBg, setColorBg] = useState("#ffffff00");
   const [colorFg, setColorFg] = useState("#ffffffff");
 
   const qrRef = useRef(null);
-
-  useEffect(() => {
-    setIsReady(true);
-  }, []);
 
   const handleColorChangeBg = (color: { hex: string }) => {
     console.log(color);
