@@ -53,16 +53,20 @@ function QR() {
   };
 
   return (
-    <div className="font-mono grid place-content-center bg-slate-500 min-h-screen">
-      <div>
+    <div className="font-mono flex items-center flex-col bg-slate-500 min-h-screen">
+      <div className="flex items-center flex-col">
         <div className="my-10">
-          <h2 className="text-2xl font-bold underline">Background Color: {colorBg}</h2>
-          <div style={{ paddingBottom: "10px" }}>
+          <h2 className="text-2xl font-bold underline">
+            Background Color: {colorBg}
+          </h2>
+          <div className="pb-2 flex justify-center">
             <HuePicker color={colorBg} onChangeComplete={handleColorChangeBg} />
           </div>
-          <h2 className="text-2xl font-bold underline">Foreground Color: {colorFg}</h2>
-          <div style={{ paddingBottom: "10px" }}>
-            <HuePicker color={colorFg} onChangeComplete={handleColorChangeFg} />
+          <h2 className="text-2xl font-bold underline">
+            Foreground Color: {colorFg}
+          </h2>
+          <div className="pb-2 flex justify-center">
+            <HuePicker className="w-full" color={colorFg} onChangeComplete={handleColorChangeFg} />
           </div>
         </div>
 
@@ -72,26 +76,29 @@ function QR() {
           onChange={handleInputChange}
           className="text-black bg-white border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-normal"
         />
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded"
-          onClick={downloadAsPNG}
-        >
-          Download QR Code as PNG
-        </button>
-        <button
-          className="bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded"
-          onClick={downloadAsSVG}
-        >
-          Download QR Code as SVG
-        </button>
+        <div>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded-l"
+            onClick={downloadAsPNG}
+          >
+            Download QR Code as PNG
+          </button>
+          <button
+            className="bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded-r"
+            onClick={downloadAsSVG}
+          >
+            Download QR Code as SVG
+          </button>
+        </div>
       </div>
+
       <div>
         <div
           ref={qrRef}
           className="max-w-md p-4"
           style={{ background: colorBg }}
         >
-          { <QrCodeComponent />}
+          <QrCodeComponent />
         </div>
       </div>
     </div>
