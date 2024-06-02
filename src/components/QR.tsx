@@ -53,7 +53,7 @@ function QR() {
   };
 
   return (
-    <div className="font-mono flex items-center flex-col bg-slate-500 min-h-screen">
+    <div className="font-mono flex items-center flex-col bg-gradient-to-r from-blue-900 to-green-900 min-h-screen">
       <div className="flex items-center flex-col">
         <div className="my-10">
           <h2 className="text-2xl font-bold underline">
