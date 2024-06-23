@@ -8,6 +8,8 @@ import QRCode from "react-qr-code";
 import { CirclePicker, HuePicker } from "react-color";
 import clsx from "clsx";
 
+import { getFilename } from "@/lib/getFilename";
+
 const ogUrlPlaceholder = "https://trilliumsmith.com/";
 const ogColorBg = "#ffffff00";
 const ogColorFg = "#ffffffff";
@@ -324,17 +326,5 @@ function QR() {
     </div>
   );
 }
-
-const getFilename = (name: string, ext: string): string => {
-  const filename =
-    "qr_" +
-    name
-      .replace(/(^\w+:|^)\/\//, "")
-      .replace(/\//g, "_")
-      .replace(/\./g, "_")
-      .replace(/_$/, "") +
-    ext;
-  return filename;
-};
 
 export default QR;
