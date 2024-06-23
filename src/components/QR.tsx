@@ -6,6 +6,7 @@ import { toPng } from "html-to-image";
 import { saveAs } from "file-saver";
 import { QRCode } from "react-qrcode-logo";
 import { HuePicker } from "react-color";
+import clsx from "clsx";
 
 const ogUrlPlaceholder = "https://trilliumsmith.com/";
 const ogColorBg = "#ffffff00";
@@ -60,17 +61,60 @@ function QR() {
     <div className="font-mono flex items-center flex-col bg-gradient-to-r from-blue-900 to-green-900 min-h-screen">
       <div className="flex items-center flex-col">
         <div className="my-10">
-          <h2 className="text-2xl font-bold underline">
-            Background Color: {colorBg}
-          </h2>
-          <div className="pb-2 flex justify-center">
-            <HuePicker color={colorBg} onChangeComplete={handleColorChangeBg} />
+          <div className="flex flex-col">
+            <h2 className="text-2xl font-bold underline">
+              Foreground Color: {colorFg}
+            </h2>
+            <div className="pb-2 flex justify-center">
+              <HuePicker
+                className="w-full"
+                color={colorFg || ogColorFg}
+                onChangeComplete={handleColorChangeFg}
+              />
+            </div>
+            <button
+              className={clsx(
+                "bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold px-4 rounded-l",
+                {
+                  "opacity-70 cursor-not-allowed": colorFg === ogColorFg,
+                }
+              )}
+              onClick={() => {
+                if (colorFg !== ogColorFg) {
+                  setColorFg(ogColorFg);
+                }
+              }}
+              disabled={colorFg === ogColorFg}
+            >
+              Reset Foreground Transparency
+            </button>
           </div>
-          <h2 className="text-2xl font-bold underline">
-            Foreground Color: {colorFg}
-          </h2>
-          <div className="pb-2 flex justify-center">
-            <HuePicker className="w-full" color={colorFg} onChangeComplete={handleColorChangeFg} />
+
+          <div className="flex flex-col">
+            <h2 className="text-2xl font-bold underline">
+              Background Color: {colorBg}
+            </h2>
+            <div className="pb-2 flex justify-center">
+              <HuePicker
+                color={colorBg || ogColorBg}
+                onChangeComplete={handleColorChangeBg}
+              />
+            </div>
+            <button
+              className={clsx(
+                "bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold px-4 rounded-l",
+                {
+                  "opacity-70 cursor-not-allowed": colorBg === ogColorBg,
+                }
+              )}
+              onClick={() => {
+                if (colorFg !== ogColorBg) {
+                  setColorBg(ogColorBg);
+                }
+              }}
+            >
+              Reset Background Transparency
+            </button>
           </div>
         </div>
 
