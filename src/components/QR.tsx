@@ -41,11 +41,9 @@ function QR() {
   const qrRef = useRef(null);
 
   const handleColorChangeBg = (color: { hex: string }) => {
-    console.log(color);
     setColorBg(color.hex);
   };
   const handleColorChangeFg = (color: { hex: string }) => {
-    console.log(color);
     setColorFg(color.hex);
   };
 
