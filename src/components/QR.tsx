@@ -4,7 +4,7 @@ import ReactDOMServer from "react-dom/server";
 import { useState, useRef } from "react";
 import { toPng } from "html-to-image";
 import { saveAs } from "file-saver";
-import { QRCode } from "react-qrcode-logo";
+import QRCode from "react-qr-code";
 import { CirclePicker, HuePicker } from "react-color";
 import clsx from "clsx";
 
@@ -244,7 +244,6 @@ function QR() {
               <div className="flex flex-col md:hidden block items-stretch content-stretch min-h-full mr-4 md:mr-0">
                 <button
                   onClick={handleBgFgSwitch}
-                  // className="h-1/2 bg-purple-500 w-36 rounded-t"
                   className={clsx("h-1/2 w-36 rounded-t box-border border-4", {
                     "font-bold rounded-t border-white bg-purple-500":
                       !bgFgSwitch,
@@ -255,7 +254,6 @@ function QR() {
                 </button>
                 <button
                   onClick={handleBgFgSwitch}
-                  // className="h-1/2 bg-orange-500 w-36 rounded-b"
                   className={clsx("h-1/2 w-36 rounded-b box-border border-4", {
                     "font-bold rounded-b border-white bg-orange-500":
                       bgFgSwitch,
@@ -284,24 +282,36 @@ function QR() {
         />
         <div className="flex flex-col md:flex-row w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-l md:w-full"
-            onClick={downloadAsPNG}
+            className={clsx(
+              "bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-l md:w-full",
+              {
+                "opacity-70 cursor-not-allowed": qrData === "",
+              }
+            )}
+            onClick={qrData !== "" ? downloadAsPNG : () => {}}
+            disabled={qrData === ""}
           >
             Download QR Code as PNG
           </button>
           <button
-            className="bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-r md:w-full"
-            onClick={downloadAsSVG}
+            className={clsx(
+              "bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-r md:w-full",
+              {
+                "opacity-70 cursor-not-allowed": qrData === "",
+              }
+            )}
+            onClick={qrData !== "" ? downloadAsSVG : () => {}}
+            disabled={qrData === ""}
           >
             Download QR Code as SVG
           </button>
         </div>
       </div>
 
-      <div>
+      <div className="md:w-[34rem] w-96 flex items-center justify-center min-w-">
         <div
           ref={qrRef}
-          className="max-w-md p-4"
+          className=" p-4 flex grow"
           style={{ background: colorBg }}
         >
           <QrCodeComponent />
