@@ -7,10 +7,14 @@ import { saveAs } from "file-saver";
 import { QRCode } from "react-qrcode-logo";
 import { HuePicker } from "react-color";
 
+const ogUrlPlaceholder = "https://trilliumsmith.com/";
+const ogColorBg = "#ffffff00";
+const ogColorFg = "#ffffffff";
+
 function QR() {
-  const [qrData, setQrData] = useState("https://trilliumsmith.com/");
-  const [colorBg, setColorBg] = useState("#ffffff00");
-  const [colorFg, setColorFg] = useState("#ffffffff");
+  const [qrData, setQrData] = useState("");
+  const [colorBg, setColorBg] = useState(ogColorBg);
+  const [colorFg, setColorFg] = useState(ogColorFg);
 
   const qrRef = useRef(null);
 
@@ -31,7 +35,7 @@ function QR() {
     <QRCode
       size={256}
       style={{ height: "auto", maxWidth: "100%", width: "100%" }}
-      value={qrData}
+      value={qrData || ogUrlPlaceholder}
       bgColor={colorBg}
       fgColor={colorFg}
     />
@@ -74,6 +78,7 @@ function QR() {
           style={{ marginBottom: "6px" }}
           value={qrData}
           onChange={handleInputChange}
+          placeholder={ogUrlPlaceholder}
           className="text-black bg-white border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-normal"
         />
         <div>
