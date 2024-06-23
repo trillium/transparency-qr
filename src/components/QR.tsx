@@ -81,8 +81,8 @@ function QR() {
   return (
     <div className="font-mono flex items-center flex-col bg-gradient-to-r from-blue-900 to-green-900 min-h-screen">
       <div className="flex items-center flex-col">
-        <div className="my-10">
-          <div className="flex items-center md:flex-row flex-col pb-10">
+        <div className="my-5 md:my-10">
+          <div className="flex items-center md:flex-row flex-col pb-10 md:pb-6">
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold underline whitespace-pre">
                 Foreground Color: {colorFg.padEnd(9, " ")}
@@ -96,7 +96,7 @@ function QR() {
               </div>
               <button
                 className={clsx(
-                  "bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold px-4 rounded-l",
+                  "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
                     "opacity-70 cursor-not-allowed": colorFg === ogColorFg,
                   }
@@ -108,7 +108,7 @@ function QR() {
                 }}
                 disabled={colorFg === ogColorFg}
               >
-                Reset Foreground Transparency
+                Reset Foreground to White
               </button>
             </div>
             <div className="ml-4 pt-4 md:p-0">
@@ -119,7 +119,7 @@ function QR() {
             </div>
           </div>
 
-          <div className="flex items-center md:flex-row flex-col">
+          <div className="flex items-center md:flex-row flex-col ">
             <div className="flex flex-col">
               <h2 className="text-2xl font-bold underline whitespace-pre">
                 Background Color: {colorBg.padEnd(9, " ")}
@@ -132,7 +132,7 @@ function QR() {
               </div>
               <button
                 className={clsx(
-                  "bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold px-4 rounded-l",
+                  "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
                     "opacity-70 cursor-not-allowed": colorBg === ogColorBg,
                   }
@@ -143,7 +143,7 @@ function QR() {
                   }
                 }}
               >
-                Reset Background Transparency
+                Reset Background to Transparent
               </button>
             </div>
             <div className="ml-4 pt-4 md:p-0">
@@ -162,15 +162,15 @@ function QR() {
           placeholder={ogUrlPlaceholder}
           className="text-black bg-white border border-gray-300 rounded-md py-2 px-4 block w-full appearance-none leading-normal"
         />
-        <div>
+        <div className="flex flex-col md:flex-row w-full">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded-l"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-l md:w-full"
             onClick={downloadAsPNG}
           >
             Download QR Code as PNG
           </button>
           <button
-            className="bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded-r"
+            className="bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-r md:w-full"
             onClick={downloadAsSVG}
           >
             Download QR Code as SVG
