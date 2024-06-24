@@ -79,7 +79,7 @@ function QR() {
   const downloadAsSVG = () => {
     let svgString = ReactDOMServer.renderToString(<QrCodeComponent />);
     if (colorBg === ogColorBg) {
-      const regex = /<path [^>]*>.*?<\/path>/s;
+      const regex = /<path [^>]*>[\s\S]*?<\/path>/;
       svgString = svgString.replace(regex, "");
     }
     const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
