@@ -9,6 +9,7 @@ import { CirclePicker, HuePicker } from "react-color";
 import clsx from "clsx";
 
 import { getFilename } from "@/lib/getFilename";
+import { contrastTextColor } from "@/lib/contrastTextColor"
 
 const ogUrlPlaceholder = "https://trilliumsmith.com/";
 const ogColorBg = "#ffffff00";
@@ -252,21 +253,25 @@ function QR() {
               <div className="flex flex-col md:hidden block items-stretch content-stretch min-h-full mr-4 md:mr-0">
                 <button
                   onClick={handleBgFgSwitch}
-                  className={clsx("h-1/2 w-36 rounded-t box-border border-4", {
-                    "font-bold rounded-t border-white bg-purple-500":
-                      !bgFgSwitch,
-                    "border-transparent bg-purple-600 bg-none": bgFgSwitch,
+                  className={clsx(`h-1/2 w-36 rounded-t box-border border-4`, {
+                    "font-bold rounded-t border-white": !bgFgSwitch,
                   })}
+                  style={{
+                    backgroundColor: colorFg,
+                    color: contrastTextColor(colorFg),
+                  }}
                 >
                   Foreground
                 </button>
                 <button
                   onClick={handleBgFgSwitch}
                   className={clsx("h-1/2 w-36 rounded-b box-border border-4", {
-                    "font-bold rounded-b border-white bg-orange-500":
-                      bgFgSwitch,
-                    "border-transparent bg-orange-600 bg-none": !bgFgSwitch,
+                    "font-bold rounded-b border-white": bgFgSwitch,
                   })}
+                  style={{
+                    backgroundColor: colorBg,
+                    color: contrastTextColor(colorBg),
+                  }}
                 >
                   Background
                 </button>
