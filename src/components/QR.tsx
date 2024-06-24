@@ -216,7 +216,7 @@ function QR() {
               </h2>
               <div className="pb-2 flex justify-center">
                 <HuePicker
-                  color={colorBg || ogColorBg}
+                  color={bgFgSwitch ? colorBg : colorFg}
                   onChangeComplete={
                     bgFgSwitch ? handleColorChangeBg : handleColorChangeFg
                   }
