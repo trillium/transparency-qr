@@ -185,7 +185,9 @@ function QR() {
                 className={clsx(
                   "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
-                    "opacity-70 cursor-not-allowed": bgFgSwitch ? colorFg === ogColorFg : colorBg === ogColorBg,
+                    "opacity-70 cursor-not-allowed": bgFgSwitch
+                      ? colorFg === ogColorFg
+                      : colorBg === ogColorBg,
                   }
                 )}
                 onClick={() => {
