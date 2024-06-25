@@ -9,7 +9,7 @@ import { CirclePicker, HuePicker } from "react-color";
 import clsx from "clsx";
 
 import { getFilename } from "@/lib/getFilename";
-import { contrastTextColor } from "@/lib/contrastTextColor"
+import { contrastTextColor } from "@/lib/contrastTextColor";
 
 const ogUrlPlaceholder = "https://trilliumsmith.com/";
 const ogColorBg = "#ffffff00";
@@ -88,7 +88,7 @@ function QR() {
   };
 
   return (
-    <div className="font-mono flex items-center flex-col bg-gradient-to-r from-blue-900 to-green-900 min-h-screen">
+    <div>
       <div className="flex items-center flex-col">
         <div className="my-5 md:my-10 hidden md:block">
           <div className="flex items-center md:flex-row flex-col pb-10 md:pb-8 hidden md:flex">
@@ -270,7 +270,7 @@ function QR() {
                   })}
                   style={{
                     backgroundColor: colorBg,
-                    color: contrastTextColor(colorBg),
+                    color: contrastTextColor(colorBg, [ogColorBg]),
                   }}
                 >
                   Background
