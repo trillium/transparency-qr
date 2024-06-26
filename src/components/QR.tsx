@@ -108,7 +108,7 @@ function QR() {
                   "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
                     "opacity-70 cursor-not-allowed": colorFg === ogColorFg,
-                  }
+                  },
                 )}
                 onClick={() => {
                   if (colorFg !== ogColorFg) {
@@ -144,7 +144,7 @@ function QR() {
                   "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
                     "opacity-70 cursor-not-allowed": colorBg === ogColorBg,
-                  }
+                  },
                 )}
                 onClick={() => {
                   if (colorFg !== ogColorBg) {
@@ -189,7 +189,7 @@ function QR() {
                     "opacity-70 cursor-not-allowed": bgFgSwitch
                       ? colorFg === ogColorFg
                       : colorBg === ogColorBg,
-                  }
+                  },
                 )}
                 onClick={() => {
                   if (colorFg !== ogColorFg) {
@@ -230,7 +230,7 @@ function QR() {
                   "bg-blue-500 hover:bg-blue-700 text-white text-base md:text-lg font-bold px-4 rounded",
                   {
                     "opacity-70 cursor-not-allowed": colorBg === ogColorBg,
-                  }
+                  },
                 )}
                 onClick={() => {
                   if (bgFgSwitch) {
@@ -299,7 +299,7 @@ function QR() {
               "bg-blue-500 hover:bg-blue-700 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-l md:w-full",
               {
                 "opacity-70 cursor-not-allowed": qrData === "",
-              }
+              },
             )}
             onClick={qrData !== "" ? downloadAsPNG : () => {}}
             disabled={qrData === ""}
@@ -311,7 +311,7 @@ function QR() {
               "bg-green-600 hover:bg-green-800 text-white font-bold my-2 py-2 px-4 rounded md:rounded-none md:rounded-r md:w-full",
               {
                 "opacity-70 cursor-not-allowed": qrData === "",
-              }
+              },
             )}
             onClick={qrData !== "" ? downloadAsSVG : () => {}}
             disabled={qrData === ""}
