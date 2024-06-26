@@ -93,7 +93,7 @@ function QR() {
         <div className="my-5 md:my-10 hidden md:block">
           <div className="flex items-center md:flex-row flex-col pb-10 md:pb-8 hidden md:flex">
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold underline whitespace-pre">
+              <h2 className="font-mono text-2xl font-bold underline whitespace-pre text-white">
                 Foreground Color: {colorFg.padEnd(9, " ")}
               </h2>
               <div className="pb-2 flex justify-center">
@@ -130,7 +130,7 @@ function QR() {
 
           <div className="flex items-center md:flex-row flex-col ">
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold underline whitespace-pre">
+              <h2 className="text-2xl font-bold underline whitespace-pre text-white font-mono">
                 Background Color: {colorBg.padEnd(9, " ")}
               </h2>
               <div className="pb-2 flex justify-center">
@@ -171,7 +171,7 @@ function QR() {
         <div className="my-5 md:my-10 md:hidden block">
           <div className="flex items-center md:flex-row flex-col pb-10 md:pb-8 hidden md:flex">
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold underline whitespace-pre">
+              <h2 className="text-2xl font-bold underline whitespace-pre text-white font-mono">
                 {bgFgSwitch ? "Background" : "Foreground"} Color:{" "}
                 {colorFg.padEnd(9, " ")}
               </h2>
@@ -213,7 +213,7 @@ function QR() {
 
           <div className="flex items-center md:flex-row flex-col ">
             <div className="flex flex-col">
-              <h2 className="text-2xl font-bold underline whitespace-pre">
+              <h2 className="text-2xl font-bold underline whitespace-pre text-white font-mono">
                 {bgFgSwitch ? "Background" : "Foreground"} Color:{" "}
                 {(bgFgSwitch ? colorBg : colorFg).padEnd(9, " ")}
               </h2>
@@ -321,13 +321,15 @@ function QR() {
         </div>
       </div>
 
-      <div className="md:w-[34rem] w-96 flex items-center justify-center min-w-">
-        <div
-          ref={qrRef}
-          className=" p-4 flex grow"
-          style={{ background: colorBg }}
-        >
-          <QrCodeComponent />
+      <div className="flex flex-row align-center justify-center">
+        <div className="md:w-[34rem] w-96 flex items-center justify-center min-w-">
+          <div
+            ref={qrRef}
+            className=" p-4 flex grow"
+            style={{ background: colorBg }}
+          >
+            <QrCodeComponent />
+          </div>
         </div>
       </div>
     </div>
