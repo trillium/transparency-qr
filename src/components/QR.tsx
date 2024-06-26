@@ -321,7 +321,7 @@ function QR() {
         </div>
       </div>
 
-      <div className="flex w-3/4 h-full max-w-2xl flex-col items-start justify-center flex-grow xl:mr-10 mr-0">
+      <div className="flex h-full max-w-2xl flex-col items-start justify-center flex-grow xl:mr-10 mr-0">
         <div className="flex items-start h-full w-full justify-center flex-grow">
           <div
             ref={qrRef}
