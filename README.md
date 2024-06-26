@@ -31,7 +31,7 @@
     QR Codes can scan even if the color contrast between the light and dark spaces ins't perfect. In situations with a gradient background, having the background coloring be able to be seen through the code can help improve the aesthetic of some designs. Thus I made this QR code generator :)
     </div>
     <br />
-    <a href="qr.trilliumsmith.com">Live Site</a>
+    <a href="https://qr.trilliumsmith.com">Live Site</a>
     ·
     <a href="https://github.com/Spiteless/transparency-qr/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
