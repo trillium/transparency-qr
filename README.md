@@ -20,6 +20,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![Netlify][netlify-shield]][Site-url]
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/trilliumsmith/)
 
 
@@ -226,3 +227,4 @@ Project Link: [https://github.com/Spiteless/transparency-qr](https://github.com/
 [Tailwindcss.com]: https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com 
 [Site-url]: https://qr.trilliumsmith.com
+[netlify-shield]: https://img.shields.io/netlify/6387ba9f-85f8-4149-83a0-69b7b1a33775?style=for-the-badge
