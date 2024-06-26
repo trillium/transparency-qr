@@ -89,7 +89,7 @@ function QR() {
 
   return (
     <div className="flex xl:flex-row xl:w-full xl:justify-around max-w-screen-2xl flex-col items-center justify-center">
-      <div className="flex items-center flex-col">
+      <div className="flex items-center flex-col m-10">
         <div className="my-5 md:my-10 hidden md:block">
           <div className="flex items-center md:flex-row flex-col pb-10 md:pb-8 hidden md:flex">
             <div className="flex flex-col">
@@ -321,7 +321,7 @@ function QR() {
         </div>
       </div>
 
-      <div className="flex h-full max-w-2xl flex-row items-center justify-center flex-grow">
+      <div className="flex h-full max-w-2xl flex-row items-center justify-center flex-grow mr-10 my-10">
         <div className="flex items-center justify-center flex-grow">
           <div
             ref={qrRef}
