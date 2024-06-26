@@ -1,0 +1,7 @@
+.circle-picker span div span div {
+  border: 1px solid white;
+}
+
+.circle-picker span div span div:focus-within {
+  border: 3px white solid;  
+}
