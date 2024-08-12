@@ -34,9 +34,9 @@
     <br />
     <a href="https://qr.trilliumsmith.com">Live Site</a>
     ·
-    <a href="https://github.com/Spiteless/transparency-qr/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/trillium/transparency-qr/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/Spiteless/transparency-qr/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/trillium/transparency-qr/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
@@ -109,7 +109,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Spiteless/transparency-qr.git
+   git clone https://github.com/trillium/transparency-qr.git
    ```
 2. Install NPM packages via `pnpm`
    ```sh
@@ -138,7 +138,7 @@ This is an example of how to list things you need to use the software and how to
 - [ ] Feature 3
     - [ ] Nested Feature -->
 
-See the [open issues](https://github.com/Spiteless/transparency-qr/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/trillium/transparency-qr/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -176,7 +176,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Trillium Smith - trillium@trilliumsmith.com
 
-Project Link: [https://github.com/Spiteless/transparency-qr](https://github.com/Spiteless/transparency-qr)
+Project Link: [https://github.com/trillium/transparency-qr](https://github.com/trillium/transparency-qr)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -195,16 +195,16 @@ Project Link: [https://github.com/Spiteless/transparency-qr](https://github.com/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Spiteless/transparency-qr.svg?style=for-the-badge
-[contributors-url]: https://github.com/Spiteless/transparency-qr/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Spiteless/transparency-qr.svg?style=for-the-badge
-[forks-url]: https://github.com/Spiteless/transparency-qr/network/members
-[stars-shield]: https://img.shields.io/github/stars/Spiteless/transparency-qr.svg?style=for-the-badge
-[stars-url]: https://github.com/Spiteless/transparency-qr/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Spiteless/transparency-qr.svg?style=for-the-badge
-[issues-url]: https://github.com/Spiteless/transparency-qr/issues
-[license-shield]: https://img.shields.io/github/license/Spiteless/transparency-qr.svg?style=for-the-badge
-[license-url]: https://github.com/Spiteless/transparency-qr/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/trillium/transparency-qr.svg?style=for-the-badge
+[contributors-url]: https://github.com/trillium/transparency-qr/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/trillium/transparency-qr.svg?style=for-the-badge
+[forks-url]: https://github.com/trillium/transparency-qr/network/members
+[stars-shield]: https://img.shields.io/github/stars/trillium/transparency-qr.svg?style=for-the-badge
+[stars-url]: https://github.com/trillium/transparency-qr/stargazers
+[issues-shield]: https://img.shields.io/github/issues/trillium/transparency-qr.svg?style=for-the-badge
+[issues-url]: https://github.com/trillium/transparency-qr/issues
+[license-shield]: https://img.shields.io/github/license/trillium/transparency-qr.svg?style=for-the-badge
+[license-url]: https://github.com/trillium/transparency-qr/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/trilliumsmith
 [product-screenshot]: images/screenshot.png
